@@ -1,5 +1,8 @@
 ############## GLOBAL YIELDS -- MODIFY BELOW ##############
 
+# The pre-set values here are the yields we adopt in the
+# Multi-zone section of Weller, Weinberg, and Johnson (2024)
+
 helium_agb = 'ventura13' # allowed values: 'ventura13', 'cristallo11', 'karakas10', 'karakas16'
 nitrogen_agb = 'cristallo11' # allowed values: 'ventura13', 'cristallo11', 'karakas10', 'karakas16'
 nitrogen_agb_prefactor = 'oxygen_scaled' # 'oxygen_scaled' or a float
@@ -11,17 +14,17 @@ ccsne_rot = 0 # allowed values: 0, 150, 300
 net = True # allowed values: True or False
 oxygen_ccsne = 'weinberg23_enhanced' # allowed values: 'weinberg23_enhanced', 'weinberg23_default', or a float
 iron_ccsne = 'weinberg23_enhanced' # allowed values: 'weinberg23_enhanced', 'weinberg23_default', or a float
-nitrogen_ccsne = 'johnson23' # allowed values: 'johnson23', or a float
+nitrogen_ccsne = 'johnson23' # allowed values: 'johnson23', function of z, or a float
 carbon_ccsne = lambda z: 2.28*10**(-3) + 5.28e-2 * (z - 0.014) # allowed values: function of z or a float
 
 iron_ia = 'weinberg23_enhanced' # allowed values: 'weinberg23_enhanced', 'weinberg23_default', or a float
 
 ############## GLOBAL YIELDS -- MODIFY ABOVE ##############
 
-############## DO NOT MODIFIED BELOW THIS LINE ##############
-############## DO NOT MODIFIED BELOW THIS LINE ##############
-############## DO NOT MODIFIED BELOW THIS LINE ##############
-############## DO NOT MODIFIED BELOW THIS LINE ##############
+############## DO NOT MODIFY BELOW THIS LINE ##############
+############## DO NOT MODIFY BELOW THIS LINE ##############
+############## DO NOT MODIFY BELOW THIS LINE ##############
+############## DO NOT MODIFY BELOW THIS LINE ##############
 
 import warnings
 warnings.filterwarnings("ignore")
