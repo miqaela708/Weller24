@@ -223,7 +223,7 @@ class lc18_interp:
         self.imf = imf
 
         try:
-            setR = pd.read_csv('mcut-SetR.txt', comment='#', delimiter='\s+') # LC18 initial-final mass relation
+            setR = pd.read_csv('LC18_Selection.txt', comment='#', delimiter='\s+') # LC18 initial-final mass relation
         except:
             raise Exception("Must download required file for LC18.")
         r_0 = np.abs(setR[setR['[Fe/H]'] == 0].reset_index()['mcut'])
@@ -353,7 +353,7 @@ class nkt_interp:
 
             if self.addLC18 and self.mupper > 40:
 
-                setR = pd.read_csv('mcut-SetR.txt', comment='#', delimiter='\s+') # LC18 initial-final mass relation
+                setR = pd.read_csv('LC18_Selection.txt', comment='#', delimiter='\s+') # LC18 initial-final mass relation
                 r_0 = list(setR[setR['[Fe/H]'] == 0].reset_index()['mcut'])
                 r_1 = list(np.abs(setR[setR['[Fe/H]'] == -1].reset_index()['mcut']))
 
